@@ -1,0 +1,51 @@
+[efl]
+git clone https://git.enlightenment.org/core/efl.git
+cd efl
+./autogen.sh --prefix=/usr --enable-drm --enable-wayland --enable-gl-drm --enable-egl --with-opengl=es --with-x11=none --disable-poppler --disable-spectre --disable-libraw --disable-librsvg --disable-xcf --with-x11=none
+
+[enlightenment]
+git clone https://git.enlightenment.org/core/enlightenment.git
+cd enlightenment
+./autogen.sh --prefix=/usr --enable-drm --enable-gl-drm --enable-wayland --enable-systemd --enable-elput --enable-egl --with-opengl=es --disable-doc --disable-wl-x11 --disable-wl-wl --enable-wl-drm --enable-wl-text-input --disable-wl-weekeyboard --disable-xwayland --disable-mixer
+
+[libinput]
+git clone https://anongit.freedesktop.org/git/wayland/libinput.git
+cd libinput
+./autogen.sh --prefix=/usr --disable-libwacom
+
+[libunwind]
+http://git.savannah.gnu.org/r/libunwind.git
+cd libunwind
+./autogen.sh --prefix=/usr
+
+[libxkbcommon]
+git clone https://github.com/xkbcommon/libxkbcommon
+cd libxkbcommon
+./autogen.sh --prefix=/usr --disable-x11
+
+[mesa]
+git clone https://anongit.freedesktop.org/git/mesa/mesa.git
+cd mesa
+./configure --prefix=/usr --enable-gles2 --with-egl-platforms=wayland,drm --enable-shared-glapi --with-gallium-drivers=i915,swrast --disable-glx --disable-dri3 --enable-glx-tls
+
+[pthread-stubs]
+git clone https://anongit.freedesktop.org/git/xcb/pthread-stubs.git
+cd pthread-stubs
+./configure --prefix=/usr
+
+[wayland]
+git clone https://anongit.freedesktop.org/git/wayland/wayland.git
+cd wayland
+./configure --prefix=/usr --disable-documentation
+
+[wayland-build-tools]
+git clone https://anongit.freedesktop.org/git/wayland/wayland-build-tools.git
+cd wayland-build-tools
+
+[wayland-protocols]
+git clone https://anongit.freedesktop.org/git/wayland/wayland-protocols.git
+cd wayland-protocols
+./configure --prefix=/usr
+
+
+
