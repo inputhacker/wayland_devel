@@ -1,7 +1,8 @@
 [efl]
 git clone https://git.enlightenment.org/core/efl.git
 cd efl
-./autogen.sh --prefix=/usr --enable-drm --enable-wayland --enable-gl-drm --enable-egl --with-opengl=es --with-x11=none --disable-poppler --disable-spectre --disable-libraw --disable-librsvg --disable-xcf --with-x11=none
+#./autogen.sh --prefix=/usr --enable-drm --enable-wayland --enable-gl-drm --enable-egl --with-opengl=es --with-x11=none --disable-poppler --disable-spectre --disable-libraw --disable-librsvg --disable-xcf --with-x11=none
+./autogen.sh --prefix=/usr --enable-drm --enable-wayland --enable-gl-drm --enable-egl --with-opengl=es --with-x11=none --disable-poppler --disable-spectre --disable-libraw --disable-librsvg --disable-xcf --with-x11=none --enable-image-loader-tiff=no --enable-pixman --enable-elput --disable-gstreamer1 --enable-always-build-examples=no --enable-i-really-know-what-i-am-doing-and-that-this-will-probably-break-things-and-i-will-fix-them-myself-and-send-patches-abb
 
 [enlightenment]
 git clone https://git.enlightenment.org/core/enlightenment.git
@@ -26,7 +27,7 @@ cd libxkbcommon
 [mesa]
 git clone https://anongit.freedesktop.org/git/mesa/mesa.git
 cd mesa
-./configure --prefix=/usr --enable-gles2 --with-egl-platforms=wayland,drm --enable-shared-glapi --with-gallium-drivers=i915,swrast --disable-glx --disable-dri3 --enable-glx-tls
+./configure --prefix=/usr --enable-gles2 --with-platforms=wayland,drm --enable-shared-glapi --with-gallium-drivers=i915,swrast --disable-glx --disable-dri3 --enable-glx-tls
 
 [pthread-stubs]
 git clone https://anongit.freedesktop.org/git/xcb/pthread-stubs.git
